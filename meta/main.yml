@@ -1,0 +1,16 @@
+---
+galaxy_info:
+  author: Roger Sherman
+  description: Automate the installation of New Relic server monitoring daemon 
+  license: MIT
+
+  platforms:
+  - name: Ubuntu
+    versions:
+    - trusty
+    - precise
+
+  categories:
+  - web
+  - cloud
+  - system

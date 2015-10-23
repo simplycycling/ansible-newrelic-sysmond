@@ -1,0 +1,13 @@
+---
+- name: Add apt key
+  apt_key: url=https://download.newrelic.com/548C16BF.gpg state=present
+- name: Add nginx repo
+  apt_repository: repo='deb http://apt.newrelic.com/debian/ newrelic non-free' state=present
+- name: update cache
+  apt: update_cache=yes cache_valid_time=3600
+- name: Install newrelic-sysmond
+  apt: name=newrelic-sysmond state=present
+- name: configure newrelic-sysmond
+  shell: nrsysmond-config --set license_key=
+  notify: start newrelic-sysmond
+
