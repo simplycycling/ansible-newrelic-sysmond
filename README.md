@@ -7,6 +7,9 @@ Running this couldn't be simpler. Just edit the tasks/main.yml and enter in
 your licence, then call the role from a playbook. Boom. You're done. Never have
 to think about it again.
 
+If you put it in version control with your license in it, don't forget to use
+Ansible Vault!
+
 # Requirements
 The only thing you need is a New Relic license. 
 
